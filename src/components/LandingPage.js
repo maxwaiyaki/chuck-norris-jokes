@@ -6,8 +6,8 @@ class LandingPage extends Component {
         return (
             <div>
                 <header>
-                    <h1>Welcome to ChuckNorris App</h1>
-                    <h3>Choose a category</h3>
+                    <h1 className="my-3 text-center font-weight-bold">Chuck Norris Jokes</h1>
+                    < p className="text-center" > Select any of the categories to see a joke. </p>
                 </header>
                 <Posts/>
             </div>

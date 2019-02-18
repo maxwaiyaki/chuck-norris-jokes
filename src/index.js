@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import AppRouter from './router/AppRouter';
+import {Provider} from 'react-redux';
+import store from './redux/Store'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//Wrap the app root in a provider to make use of redux 
+const jsx = (
+    <Provider store={store}><AppRouter/></Provider> 
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+ReactDOM.render(jsx, document.getElementById('root'));
+
 serviceWorker.unregister();
